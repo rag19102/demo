@@ -1,0 +1,25 @@
+html,body{
+background-image: url('https://www.britishairways.com/assets/images/MediaHub/Media-Database/Royalty-free-RF/Destinations/Mauritius-MRU/185241201_1200x675.jpg');
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+
+}
+
+.container-fluid{
+height: 100%;
+align-content: center;
+}
+.card{
+height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px;
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+button{
+		height: 100;
+		width:  100;
+		}

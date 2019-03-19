@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head><title>TCT HOLIDAYS</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="E:\tct holidays website\css\main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	
+	<script type="text/javascript">
+	function myFunction() {
+	var username = document.getElementById("usr");
+	var password = document.getElementById("mail");
+	
+		if(username.value.trim() == ""||password.value.trim() == "" ){
+			alert("Username or Password should not be empty.");
+			return false;
+		}
+		if(password.value.length < 8){
+			alert("password should be minimum 8 charecters.");
+			return false;
+		}
+		if(username.value == password.value ){
+			alert("Login Sucessful press ok.");
+			return true;
+		}
+		else{
+			alert("please enter corect password");
+			return false;
+		}
+			
+	
+	}
+	</script>
+	</head>
+	<body>
+	    <div class="container-fluid"class="form" >
+			<div class="d-flex justify-content-center h-100">
+				<div class="card">
+					<div class="card-header">
+					<form action="agent.html"  onsubmit="return myFunction()" method="post">
+					<a href="#" ><img   class="mx-auto d-block rounded" src="E:\tct holidays website\images\logo.png" height="130px"></a> <br><br>
+							
+						<div class="input-group mb-3">
+							<div class="input-group-prepend">
+								<span class="input-group-text">@</span>
+							</div>
+								<input type="email" class="form-control" placeholder="Username" id="usr" name="username">
+						</div>
+
+						<div class="input-group mb-3">
+							<input type="password" class="form-control" placeholder="Password" id="mail" name="password" >
+							<div class="input-group-append">
+								<span class="input-group-text"></span>
+							</div>
+						</div>
+					<button type="submit"    class="btn btn-primary float-right" value="submit">Login</button>
+					</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
