@@ -18,51 +18,6 @@
 <link href="css/dashboard.css" rel="stylesheet">
 <link href="css/recharge.css" rel="stylesheet">
 
-<style>
-.card-footer {
-    padding: .75rem 1.25rem;
-    background-color: white;
-    border-top: none;
-}
-select {
-    word-wrap: normal;
-    width: 75px;
-    display: inline-block;
-}
-table{
-    width:100%;
-}
-
-table, th,td{
-    border:1px solid #ddd;
-    display:absolute;
-
-}
-th{
-    height: 50px;
-    padding: 15px;
-}
-td{
-    padding-left: 15px;
-    padding: 12px,10px;
-    background-color: #f9f9f9; 
-}
-.btn-info {
-    background-color: #34d3eb !important;
-    border: 1px solid #34d3eb !important;
-}
-.btn-xs {
-    padding: 1px 5px !important;
-    font-size: 12px;
-}
-.btn{
-    
-    border-radius: 2px;
-    font-size: 14px;
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-</style>
 </head>
 <body>
     <nav class="navbar navbar-light bg-light ">
@@ -86,7 +41,7 @@ td{
                   <h5>Hi Raghavender Rao</h5>
               </li>
               <li><a href="profile.html"><i class="dripicons-user m-r-10"></i> Profile</a></li>
-              <li><a href="transaction.html"><i class="fa fa-inr m-r-10"></i> My Transactions</a></li>
+              <li><a href="transcation.html"><i class="fa fa-inr m-r-10"></i> My Transactions</a></li>
               <li><a href="index.html"><i class="dripicons-power m-r-10"></i> Logout</a></li>
           </ul>
 
@@ -131,7 +86,7 @@ td{
                 </a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="customerlist.html">Customer List</a>
-                  <a class="dropdown-item" href="accounts.html">Accounts</a>
+                  <a class="dropdown-item" href="account.html">Accounts</a>
                 </div>
               </li>
         </ul>
@@ -148,94 +103,67 @@ td{
                     <a href="#">Home ></a>
                   </li>
                   <li>
-                    <a href="#">Recharge Wallet</a>
+                    <a href="#">Accounts ></a>
+                  </li>
+                  <li>
+                    <a href="#">Accounts</a>
                     </li>
                   </ul>
 
               </div>
-                <h4>Recharge Wallet
-                <a href="#"><button class="btn btn-primary" >Request sent</button></a></h4>
+                <h4>Accounts</h4>
+
             </div>
           </div>
       </div>
-
       <div class="container">
-          <div calss="row">
-              <div class="col-md-12 card">
-                  
-                  <div class="card-header">
-                      <div class="row">
-                          <div class="col-md-6">
-                                <lable>show
-                                        <select class="select-box">
-                                            <option value="10">10</option>
-                                            <option value="20">20</option>
-                                            <option value="50 ">50</option>
-              
-                                        </select>
-                                        entries
-                                    </lable>
-
-                          </div>
-                          <div class="col-md-6">
-                              <lable class="search" style="float:right;" >search:
-                                  <input type="text" placeholder="">
-                              </lable>
-
-
-                          </div>
-                          <div class="card-body">
-                              <table>
-                                  <tr>
-                                      <th>S.No</th>
-                                      <th>Account Number</th>
-                                      <th>IFSC Code</th>
-                                      <th>Bank Name</th>
-                                      <th>Deposit Details</th>
-                                  </tr>
-                                  <tr>
-                                      <td>1</td>
-                                      <td>3211644629</td>
-                                      <td>KKBK0000560</td>
-                                      <td>Kotak Mahindra Bank</td>
-                                      <td><a href="wallet.html"><button class="btn btn-xs btn-info">update</button> </a></td>
-                                  </tr>
-                              </table>
-                          </div>
-                         
-                      </div>
-                      
-                  
-                </div>
-                <div class="card-footer">
-                    <div class="row">
-                        <div class="col-md-6"> 
-                            <lable>showing 1 of 1 entries  </lable>
-                        </div>
-                        <div class="col-md-6 ">
-                                <nav aria-label="... ">
-                                        <ul class="pagination pull-right">
-                                          <li class="page-item disabled">
-                                            <a class="page-link" href="#" tabindex="-1">Previous</a>
-                                          </li>
-                                          <li class="page-item active">
-                                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
-                                          </li>
-                                          <li class="page-item">
-                                            <a class="page-link" href="#">Next</a>
-                                          </li>
-                                        </ul>
-                                      </nav>
-
-                        </div>
+          <div  class="row">
+              <div class="col-md-4">
+                  <div class="card" style="border: #ddd 1px solid;">
+                    <div class="card-header">
+                        <label>Ledger</label>
                     </div>
-                </div>
+                    <div class="card-body">
+                        <form class="form-group" action="rechargeresponce.html">
+                            <lable><small>From Date</small></lable>
+                            <input type="text" class="form-control" name="amount">
+                            <lable><small>To Date</small></lable>
+                            <input type="text" class="form-control" name="amount">
+                            <div class="recharge-btn" >
+                                <a href="rechargeresponce.html"><button class="btn btn-primary">Show Ledger</button>
+                                </a>
+                            </div>
 
+                        </form>
+                    </div>
+
+                  </div>
               </div>
-              
+              <div class="col-md-4">
+                  <div class="card" style="border: #ddd 1px solid;">
+                    <div class="card-header">
+                        <label>Payment Transcation History</label>
+                    </div>
+                    <div class="card-body">
+                        <form class="form-group" action="rechargeresponce.html">
+                            <lable><small>From Date</small></lable>
+                            <input type="text" class="form-control" name="amount">
+                            <lable><small>To Date</small></lable>
+                            <input type="text" class="form-control" name="amount">
+                            <div class="recharge-btn" >
+                                <a href="rechargeresponce.html"><button class="btn btn-primary">Show History</button>
+                                </a>
+                            </div>
+
+                        </form>
+                    </div>
+
+                  </div>
               </div>
+
           </div>
 
+      </div>
      
 
 <footer class="footer">
