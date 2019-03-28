@@ -17,6 +17,27 @@
 <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 <link href="css/dashboard.css" rel="stylesheet">
 <link href="css/recharge.css" rel="stylesheet">
+<style>
+table{
+        width:100%;
+    }
+    
+    table, th,td{
+        border-bottom:1px solid #ddd;
+        display:absolute;
+    
+    }
+    th{
+        height: 50px;
+        padding: 15px;
+    }
+    td{
+        padding-left: 15px;
+        padding: 12px,10px;
+        background-color: #f9f9f9; 
+    }
+
+    </style>
 
 </head>
 <body>
@@ -119,43 +140,43 @@
       <div class="container">
           <div  class="row">
               <div class="col-md-4">
-                  <div class="card" style="border: #ddd 1px solid;">
+                  <div class="card" style="border: #ddd 1px solid; " id="tab1">
                     <div class="card-header">
                         <label>Ledger</label>
                     </div>
                     <div class="card-body">
-                        <form class="form-group" action="rechargeresponce.html">
+                        
                             <lable><small>From Date</small></lable>
-                            <input type="text" class="form-control" name="amount">
+                            <input type="date" class="form-control" name="amount">
                             <lable><small>To Date</small></lable>
-                            <input type="text" class="form-control" name="amount">
+                            <input type="date" class="form-control" name="amount">
                             <div class="recharge-btn" >
-                                <a href="rechargeresponce.html"><button class="btn btn-primary">Show Ledger</button>
-                                </a>
+                               <button class="btn btn-primary" onclick="mylistFunction()">Show Ledger</button>
+                                
                             </div>
 
-                        </form>
+                        
                     </div>
 
                   </div>
               </div>
-              <div class="col-md-4">
-                  <div class="card" style="border: #ddd 1px solid;">
+              <div class="col-md-4" >
+                  <div class="card" style="border: #ddd 1px solid; display:block;" id="tab2">
                     <div class="card-header">
                         <label>Payment Transcation History</label>
                     </div>
                     <div class="card-body">
-                        <form class="form-group" action="rechargeresponce.html">
+                        
                             <lable><small>From Date</small></lable>
-                            <input type="text" class="form-control" name="amount">
+                            <input type="date" class="form-control" name="amount">
                             <lable><small>To Date</small></lable>
-                            <input type="text" class="form-control" name="amount">
+                            <input type="date" class="form-control" name="amount">
                             <div class="recharge-btn" >
-                                <a href="rechargeresponce.html"><button class="btn btn-primary">Show History</button>
-                                </a>
+                                <button class="btn btn-primary" onclick="mylistFunction1()" >Show History</button>
+                               
                             </div>
 
-                        </form>
+                       
                     </div>
 
                   </div>
@@ -164,7 +185,123 @@
           </div>
 
       </div>
-     
+
+
+     <div class="container" style="padding-top:20px;  ">
+       <div class="row">
+         <div class="col-md-12">
+           <div class="card" style="border: #ddd 1px solid; display: none;" id="list1">
+             <div class="card-body">
+               <table>
+                 <tr>
+                   <th>SNo</th>
+                   <th>Date</th>
+                   <th>Remark</th>
+                   <th>Cr</th>
+                   <th>Dr</th>
+                   <th>ClosingBalance</th>
+                 </tr>
+                 <tr>
+                   <td>1</td>
+                   <td>3/14/2019 9:10:50 AM</td>
+                   <td>Amount Added To Wallet</td>
+                   <td>20000.00</td>
+                   <td></td>
+                   <td>1020000.00</td>
+                 </tr>
+                 <tr>
+                    <td>1</td>
+                    <td>3/14/2019 9:10:50 AM</td>
+                    <td>Amount Added To Wallet</td>
+                    <td>20000.00</td>
+                    <td></td>
+                    <td>1020000.00</td>
+                  </tr>
+                  <tr>
+                      <td>1</td>
+                      <td>3/14/2019 9:10:50 AM</td>
+                      <td>Amount Added To Wallet</td>
+                      <td>20000.00</td>
+                      <td></td>
+                      
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>3/14/2019 9:10:50 AM</td>
+                        <td>Amount Added To Wallet</td>
+                        <td>20000.00</td>
+                        <td></td>
+                        <td>1020000.00</td>
+                      </tr>
+                      <tr>
+                          <td>1</td>
+                          <td>3/14/2019 9:10:50 AM</td>
+                          <td>Amount Added To Wallet</td>
+                          <td>20000.00</td>
+                          <td></td>
+                          <td>1020000.00</td>
+                        </tr>
+               </table>
+
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+     <div class="container" style="padding-top:20px;  ">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card" style="border: #ddd 1px solid; display: none;" id="list2">
+              <div class="card-body">
+                <table>
+                  <tr>
+                    <th>SNo</th>
+                    <th>Date</th>
+                    <th>Remark</th>
+                    <th>Amount</th>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>3/14/2019 9:10:50 AM</td>
+                    <td>Amount Added To Wallet</td>
+                    <td>1020000.00</td>
+                  </tr>
+                  <tr>
+                     <td>1</td>
+                     <td>3/14/2019 9:10:50 AM</td>
+                     <td>Amount Added To Wallet</td>
+                     <td>1020000.00</td>
+                   </tr>
+                   <tr>
+                       <td>1</td>
+                       <td>3/14/2019 9:10:50 AM</td>
+                       <td>Amount Added To Wallet</td>
+                       <td>20000.00</td>
+                       <td></td>
+                       
+                     </tr>
+                     <tr>
+                         <td>1</td>
+                         <td>3/14/2019 9:10:50 AM</td>
+                         <td>Amount Added To Wallet</td>
+                         <td>20000.00</td>
+                         
+                       </tr>
+                       <tr>
+                           <td>1</td>
+                           <td>3/14/2019 9:10:50 AM</td>
+                           <td>Amount Added To Wallet</td>
+                           <td>20000.00</td>
+                           
+                         </tr>
+                </table>
+ 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ 
 
 <footer class="footer">
 
@@ -176,5 +313,38 @@
   
   </footer>
   <!-- Footer -->
+  <script>
+  function mylistFunction() {
+                var y = document.getElementById("list1");
+                if (y.style.display === "none") {
+                    y.style.display = "block";
+                } 
+                else {
+                    y.style.display = "none";
+                }
+
+                var z=document.getElementById("tab2");
+                if (z.style.display === "none") {
+                    z.style.display = "block";
+                } 
+                else {
+                    z.style.display = "none";
+                }
+            }
+  function mylistFunction1() {
+   
+                var y = document.getElementById("list2");
+                if (y.style.display === "none") {
+                    y.style.display = "block";
+                } 
+                else {
+                    y.style.display = "none";
+                }
+                
+
+               
+            }
+
+  </script>
 </body>
 </html> 
