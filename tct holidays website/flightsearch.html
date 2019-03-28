@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+           <title>SEARCH INDEX</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <style>
+            body {
+                   background-color:rgb(192, 189, 189);
+                  
+                  
+                   font-family: Arial, Helvetica, sans-serif;
+                   
+                 }
+            
+            .topnav {
+                     overflow: hidden;
+             
+                     }
+                    
+                    
+            
+            .topnav a  {
+                         float: left;
+                         text-align: center;
+                         padding: 14px 16px;
+                         text-decoration: none;
+                         font-size: 17px;
+                        }
+            
+            .topnav a:hover {
+              background-color:dimgrey;
+            }
+            label {
+    font-size: 13px;
+    color: #313a46;
+    letter-spacing: 0.01em;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+            
+            
+            
+            .topnav-right {
+                float: right;
+                margin-top: 10px;
+                
+              }
+            #c2{                
+             background-color:honeydew;
+              padding-left: 0px;
+            }
+            #c3{
+                
+                background-color: honeydew;
+               }
+               
+               #c5{
+                         float: left;
+                         
+                         padding: 14px 16px;
+                         text-decoration: none;
+                         font-size: 17px;
+
+               }
+               
+               #select {
+               box-sizing: content-box;
+               height: 23px;
+               width: 30px;
+               }
+               .submit-button{
+                   border: 10px;
+                   background-color:rgb(71, 169, 199);
+                   margin-top: 30px;
+
+                   height: 40%;
+                   color:white;
+                   min-width: 70%;
+                   text-align: inline-block;
+                   margin-left: 15px;    
+                   float: right;
+                  
+                 }
+
+               .col-md-3 .col-md-4 label{
+                   margin-left: 0px;
+                   text-align: left;
+
+
+               }
+                          
+             
+            
+            </style>
+        
+    </head>
+ <body>
+    <form action="fightresults.html"> 
+       <div class="container"id="c1">
+             <div class="topnav" id="c4">
+                 <div class="topnav-left-search" id="c5">
+                        <h5>Search Flights</h5>
+                 </div>
+             
+                <div class="topnav-right">
+                  <a href="index.html bg-color:black">Home</a>
+                  <a href="#flights">flight</a>
+                  <a href="#flightsearch.html">Search</a>
+                </div>
+            </div>
+             
+              
+              
+       </div>
+       <div class="container" id="c2">
+             <div class="col-md-12 col-sm-12 col-xs-12">
+                <input type="radio" name="TripType" id="OneWay" value="Oneway" onchange="flights.updateTripType()" checked > <label for="OneWay">One Way</label>
+                <input type="radio" name="TripType" id="RoundTrip" value="ROUND" onchange="flights.updateTripType()" > <label for="RoundTrip">Round Trip</label>
+            </div>
+        </div>
+
+        <div class="container" id="c3">
+         <div class="row">
+            <div class="col-md-2 col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label>Source</label>
+                    <input type="text" name="Source" class="form-control airports" id="Source" required value="" />
+                </div>
+            </div>
+
+            <div class="col-md-2 col-xs-12 col-sm-6">
+                    <label>Destination</label>
+                <div class="form-group ">
+                    <input type="text" name="Destination" class="form-control airports" id="Destination" required value="" />
+                </div>
+               
+            </div>
+
+            <div class="col-md-2 col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label>Departure</label>
+                    <input type="date" name="Doj" class="form-control datepicker" id="Doj" value="date" required>    
+                </div>
+            </div>
+
+            <div class="col-md-2 col-xs-12 col-sm-6">
+                <div class="form-group">
+                         
+                                     <label>Return</label>
+                    <input type="date" name="ReturnDate" class="form-control datepicker" id="ReturnDate" value="20/03/2019" disabled >
+                
+            </div>
+  
+            </div>
+            <div class="col-md-3 col-xs-12 col-sm-12">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 col-sm-12">
+                        
+                            
+                            <label>Adults</label>
+                            <select class="form-control" id="select">
+                               
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                           
+                            </select>
+                       
+                    </div>
+                    
+                    <div class="col-md-4  col-xs-12 col-sm-12">
+                        
+                            <label>Children</label>
+                            <select class="form-control" id="select">
+                                   
+                                <option value="0" >0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                    
+                            </select>
+                        
+                    </div>
+                    <div class="col-md-4  col-xs-12 col-sm-12">
+                        
+                            <label>Infant</label>
+                            <select  class="form-control" id="select">
+                                
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            
+                            </select>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="" >
+                
+
+                    <button class="submit-button" type="submit">Search</button>
+                       
+                       
+                    
+                        
+                </div>
+            </div>
+        </div>
+        </div>
+</form>            
+</body>
+</html>
