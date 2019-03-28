@@ -2,6 +2,7 @@
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
+   background-color: #f9f9f9;  
   }
   
   .sidenav {
@@ -53,7 +54,113 @@ body {
       padding:0 20px;
       box-sizing: border-box;
   }  
-  @media screen and (max-height: 450px) {
+  @media screen and (max-height: 768px) {
     .sidenav {padding-top: 15px;}
     .sidenav a {font-size: 18px;}
   }
+
+  .avatar {
+    vertical-align: right;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:white;
+    text-align: center;
+  }
+  .col-md-1 ul li {
+    border-left: 6px solid lightblue;
+    background-color: #f9f9f9;
+    margin-bottom: 1%;
+    position: relative;
+    
+    
+  }
+  .bg-light {
+    background-color: white !important;
+}
+  a:hover {
+    color: #23527c;
+    text-decoration: none;
+  }
+
+  #ui{
+    flex-direction: row;
+
+    
+  }
+
+  li .nav-item{
+    position: relative;
+    display:block;
+  }
+
+ 
+
+
+  .page-title {
+    font-size: 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+    font-weight: 600;
+}
+.navbar-brand {
+  display: contents;
+  padding-top: .3125rem;
+  padding-bottom: .3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.col-md-3{
+  float:right;
+}
+
+.dropdown-menu>li>a {
+  display: block;
+  padding: 3px 20px;
+  clear: both;
+  font-weight: 400;
+  line-height: 1.42857143;
+  color: #333;
+  white-space: nowrap;
+}
+
+ul {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+span{
+  float:right;
+}
+
+.navbar-collapse ul li a i{
+  margin-right: 5%;
+  display: inline;
+
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255,255,255,.8)!important;
+}
+
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content:none !important;
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
