@@ -1,0 +1,29 @@
+.btn-group .pull-right {
+    display: flex;
+
+}  
+.recharge-btn{
+    padding-top: 10px;
+}
+.link-list{
+    display:flex;
+}
+.link-list li{
+    display:inline-flex !important;
+}
+
+
+a{
+    color:black;
+}
+
+.card-header {
+    padding: .75rem 1.25rem;
+    margin-bottom: 0;
+    background-color:white !important;
+    border-bottom: none;
+}
+.card{
+    border:solid 1px black;
+    
+}
