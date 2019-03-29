@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="E:\tct holidays website\css\dashboard.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<link href="css/dashboard.css" rel="stylesheet">
+<link href="css/recharge.css" rel="stylesheet"> 
+
+
+<style>
+    .card-footer {
+        padding: .75rem 1.25rem;
+        background-color: white;
+        border-top: none;
+    }
+    select {
+        word-wrap: normal;
+        width: 75px;
+        display: inline-block;
+    }
+    table{
+        width:100%;
+        border: blueviolet 1px solid;
+
+    }
+    
+    th,td{
+        border-bottom:1px solid #ddd;
+        display:absolute;
+    
+    }
+    th{
+        height: 50px;
+        padding: 15px;
+        background-color: rgb(141, 56, 221);
+        color:white;
+    }
+    td{
+        padding-left: 15px;
+        padding: 12px,10px;
+        background-color: #f9f9f9; 
+    }
+    .btn-info {
+        background-color: #34d3eb !important;
+        border: 1px solid #34d3eb !important;
+    }
+    .btn-xs {
+        padding: 1px 5px !important;
+        font-size: 12px;
+    }
+    .btn{
+        
+        border-radius: 2px;
+        font-size: 14px;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    
+    </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light ">
+    
+      <div class="navbar-header col-lg-8 col-sm-6 col-md-8 col-sm-6">
+      <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Travel Cope" style="max-width: 200px">
+    </div>
+    
+    <div class="col-md-2 float-right hidden-xs " id="nav">
+      <span>
+          Welcome TT 
+      </span>
+    </div>
+    <div class="col-md-1 hidden-xs">
+        <i class="fa fa-inr"></i>
+        10000
+    </div>
+    <div class="col-md-1 right-menu-item dropdown-toggle col-sm-6"  data-toggle="dropdown" >
+        <img src="images/avatar.png" alt="Avatar" class="avatar">
+        <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list" style="-webkit-appearance: none;">
+            <li class="text-center">
+                <h5>Hi Raghavender Rao</h5>
+            </li>
+            <li><a href="profile.html"><i class="dripicons-user m-r-10"></i> Profile</a></li>
+            <li><a href="transcation.html"><i class="fa fa-inr m-r-10"></i> My Transactions</a></li>
+            <li><a href="index.html"><i class="dripicons-power m-r-10"></i> Logout</a></li>
+        </ul>
+
+    </div>
+ </nav>
+ 
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="navbar-collapse collapse justify-content-between">
+        <!-- Links -->
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="agent.html"><i class="fa fa-dashboard"></i>Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flights.html"><i class="fa fa-plane"></i>Flights</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="buses.html"><i class="fa fa-bus"></i>buses</a>
+        </li>
+    
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-inr"></i>Recharges</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="rechargeonline.html">Recharge Online</a>
+            <a class="dropdown-item" href="rechargeoffline.html">Recharge Ofline</a>
+            <a class="dropdown-item" href="rechargerequest.html">Recharge Request</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-credit-card"></i>Bookings
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="all.html">All</a>
+              <a class="dropdown-item" href="buslist.html">Buses</a>
+              <a class="dropdown-item" href="flightlist.html">Flights</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-cog"></i>More
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="customerlist.html">Customer List</a>
+                <a class="dropdown-item" href="accounts.html">Accounts</a>
+              </div>
+            </li>
+      </ul>
+      </div>
+    </nav>
+
+
+  <div class="container">
+    <div class="row ">
+        
+      <div class="col-md-12 heading ">
+        <div class="btn-group pull-right">
+          <ul class="link-list">
+            <li>
+              <a href="#">Home <i class="fa fa-angle-right"></i></a>
+            </li>
+            <li>
+              <a href="#">Profile <i class="fa fa-angle-right"></i></a>
+            </li>
+            <li>
+                <a href="#">Booking</a>
+              </li>
+          </ul>
+        </div>
+            <h6>Bookings</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div calss="row">
+        <div class="col-md-12 card" style="border: #ddd 1px solid;">
+            <h5 style="color: #666f7b; padding-top:10px;"><b>Bus Bookings</b></h5>
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                          <lable>show
+                                  <select class="select-box">
+                                      <option value="10">10</option>
+                                      <option value="20">20</option>
+                                      <option value="50 ">50</option>
+        
+                                  </select>
+                                  entries
+                              </lable>
+
+                    </div>
+                    <div class="col-md-6">
+                        <lable class="search" style="float:right;" >search:
+                            <input type="text" placeholder="">
+                        </lable>
+
+
+                    </div>
+                    <div class="card-body">
+                        <table>
+                            <tr>
+                                <th>#</th>
+                                <th>Booked On</th>
+                                <th>PNR</th>
+                                <th>From</th>
+                                <th>To</th>
+                                <th>Doj</th>
+                                <th>Amount</th>
+                                <th>Commission</th>
+                                <th>Status</th>
+                                <th>#</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>14-Mar-2019</td>
+                                <td>44YUG96G</td>
+                                <td>Hyderabad</td>
+                                <td>Chennai</td>
+                                <td>19 Mar 2019</td>
+                                <td>122.59</td>
+                                <td>7.80</td>
+                                <td>Confirmed</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Mail Tickets</a></li>
+                                            <li><a href="#">View Tickets</a></li>
+                                            <li><a href="#">Agent Invoice</a></li>
+                                            <li><a href="#">Edit Transaction Fee</a></li>
+                                           
+                                            
+                                        </ul>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>14-Mar-2019</td>
+                                <td>44YUG96G</td>
+                                <td>Hyderabad</td>
+                                <td>Chennai</td>
+                                <td>19 Mar 2019</td>
+                                <td>122.59</td>
+                                <td>7.80</td>
+                                <td>Confirmed</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Mail Tickets</a></li>
+                                            <li><a href="#">View Tickets</a></li>
+                                            <li><a href="#">Agent Invoice</a></li>
+                                            <li><a href="#">Edit Transaction Fee</a></li>
+                                           
+                                            
+                                        </ul>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>14-Mar-2019</td>
+                                <td>44YUG96G</td>
+                                <td>Hyderabad</td>
+                                <td>Chennai</td>
+                                <td>19 Mar 2019</td>
+                                <td>122.59</td>
+                                <td>7.80</td>
+                                <td>Confirmed</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Mail Tickets</a></li>
+                                            <li><a href="#">View Tickets</a></li>
+                                            <li><a href="#">Agent Invoice</a></li>
+                                            <li><a href="#">Edit Transaction Fee</a></li>
+                                           
+                                            
+                                        </ul>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>14-Mar-2019</td>
+                                <td>44YUG96G</td>
+                                <td>Hyderabad</td>
+                                <td>Chennai</td>
+                                <td>19 Mar 2019</td>
+                                <td>122.59</td>
+                                <td>7.80</td>
+                                <td>Confirmed</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Mail Tickets</a></li>
+                                            <li><a href="#">View Tickets</a></li>
+                                            <li><a href="#">Agent Invoice</a></li>
+                                            <li><a href="#">Edit Transaction Fee</a></li>
+                                           
+                                            
+                                        </ul>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>14-Mar-2019</td>
+                                <td>44YUG96G</td>
+                                <td>Hyderabad</td>
+                                <td>Chennai</td>
+                                <td>19 Mar 2019</td>
+                                <td>122.59</td>
+                                <td>7.80</td>
+                                <td>Confirmed</td>
+                                <td>
+                                    <div class="dropdown">
+                                        <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                            <i class="fa fa-cog" aria-hidden="true"></i>
+                                            <i class="fa fa-caret-down"></i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">Mail Tickets</a></li>
+                                            <li><a href="#">View Tickets</a></li>
+                                            <li><a href="#">Agent Invoice</a></li>
+                                            <li><a href="#">Edit Transaction Fee</a></li>
+                                           
+                                            
+                                        </ul>
+                                    </div>
+                                </td>
+                                
+                            </tr>
+                            
+                            
+                                        
+                        </table>
+                    </div>
+                   
+                </div>
+                
+            
+          </div>
+          <div class="card-footer">
+              <div class="row">
+                  <div class="col-md-6"> 
+                      <lable>showing 1 to 5 of 5 entries  </lable>
+                  </div>
+                  <div class="col-md-6 ">
+                          <nav aria-label="... ">
+                                  <ul class="pagination pull-right">
+                                    <li class="page-item disabled">
+                                      <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                    </li>
+                                    <li class="page-item active">
+                                      <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="page-item">
+                                      <a class="page-link" href="#">Next</a>
+                                    </li>
+                                  </ul>
+                                </nav>
+
+                  </div>
+              </div>
+          </div>
+
+        </div>
+        
+        </div>
+    </div><br > <br>
+
+    <div class="container">
+            <div calss="row">
+                <div class="col-md-12 card" style="border: #ddd 1px solid;">
+                    <h5 style="color: #666f7b; padding-top:10px;"><b>Flight Bookings</b></h5>
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-6">
+                                  <lable>show
+                                          <select class="select-box">
+                                              <option value="10">10</option>
+                                              <option value="20">20</option>
+                                              <option value="50 ">50</option>
+                
+                                          </select>
+                                          entries
+                                      </lable>
+        
+                            </div>
+                            <div class="col-md-6">
+                                <lable class="search" style="float:right;" >search:
+                                    <input type="text" placeholder="">
+                                </lable>
+        
+        
+                            </div>
+                            <div class="card-body">
+                                <table>
+                                    <tr>
+                                        <th>#</th>
+                                        
+                                        <th>PNR</th>
+                                        <th>From</th>
+                                        <th>To</th>
+                                        <th>Invoice Amount</th>
+                                        <th>status</th>
+                                        <th>Booked On</th>
+                                        
+                                        <th>#</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>YEQWSN - AKYEUH</td>
+                                        <td>HYDERABAD</td>
+                                        <td>Vishakhapatnam</td>
+                                        <td>14129.61</td>
+                                        <td>Confirmed</td>
+                                        <td>14-03-2019</td>
+                                        
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Mail Tickets</a></li>
+                                                    <li><a href="#">View Tickets</a></li>
+                                                    <li><a href="#">Agent Invoice</a></li>
+                                                    <li><a href="#">Edit Transaction Fee</a></li>
+                                                   
+                                                    
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                            <td>2</td>
+                                            <td>YEQWSN - AKYEUH</td>
+                                            <td>HYDERABAD</td>
+                                            <td>Vishakhapatnam</td>
+                                            <td>14129.61</td>
+                                            <td>Confirmed</td>
+                                            <td>14-03-2019</td>
+                                        <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Mail Tickets</a></li>
+                                                    <li><a href="#">View Tickets</a></li>
+                                                    <li><a href="#">Agent Invoice</a></li>
+                                                    <li><a href="#">Edit Transaction Fee</a></li>
+                                                   
+                                                    
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                            <td>3</td>
+                                            <td>YEQWSN - AKYEUH</td>
+                                            <td>HYDERABAD</td>
+                                            <td>Vishakhapatnam</td>
+                                            <td>14129.61</td>
+                                            <td>Confirmed</td>
+                                            <td>14-03-2019</td>
+                                            
+                                            <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Mail Tickets</a></li>
+                                                    <li><a href="#">View Tickets</a></li>
+                                                    <li><a href="#">Agent Invoice</a></li>
+                                                    <li><a href="#">Edit Transaction Fee</a></li>
+                                                   
+                                                    
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                            <td>4</td>
+                                            <td>YEQWSN - AKYEUH</td>
+                                            <td>HYDERABAD</td>
+                                            <td>Vishakhapatnam</td>
+                                            <td>14129.61</td>
+                                            <td>Confirmed</td>
+                                            <td>14-03-2019</td>
+                                            
+                                            <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Mail Tickets</a></li>
+                                                    <li><a href="#">View Tickets</a></li>
+                                                    <li><a href="#">Agent Invoice</a></li>
+                                                    <li><a href="#">Edit Transaction Fee</a></li>
+                                                   
+                                                    
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                            <td>5</td>
+                                            <td>YEQWSN - AKYEUH</td>
+                                            <td>HYDERABAD</td>
+                                            <td>Vishakhapatnam</td>
+                                            <td>14129.61</td>
+                                            <td>Confirmed</td>
+                                            <td>14-03-2019</td>
+                                            
+                                            <td>
+                                            <div class="dropdown">
+                                                <button type="button" class="btn btn-xs btn-danger dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                                    <i class="fa fa-cog" aria-hidden="true"></i>
+                                                    <i class="fa fa-caret-down"></i>
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="#">Mail Tickets</a></li>
+                                                    <li><a href="#">View Tickets</a></li>
+                                                    <li><a href="#">Agent Invoice</a></li>
+                                                    <li><a href="#">Edit Transaction Fee</a></li>
+                                                   
+                                                    
+                                                </ul>
+                                            </div>
+                                        </td>
+                                        
+                                    </tr>
+                                    
+                                    
+                                                
+                                </table>
+                            </div>
+                           
+                        </div>
+                        
+                    
+                  </div>
+                  <div class="card-footer">
+                      <div class="row">
+                          <div class="col-md-6"> 
+                              <lable>showing 1 to 5 of 5 entries  </lable>
+                          </div>
+                          <div class="col-md-6 ">
+                                  <nav aria-label="... ">
+                                          <ul class="pagination pull-right">
+                                            <li class="page-item disabled">
+                                              <a class="page-link" href="#" tabindex="-1">Previous</a>
+                                            </li>
+                                            <li class="page-item active">
+                                              <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                                            </li>
+                                            <li class="page-item">
+                                              <a class="page-link" href="#">Next</a>
+                                            </li>
+                                          </ul>
+                                        </nav>
+        
+                          </div>
+                      </div>
+                  </div>
+        
+                </div>
+                
+                </div>
+            </div>
+<br>
+<br>
+<br>
+      
+
+<footer class="footer">
+
+    
+    <div class="footer-copyright text-center py-3"><h6>© 2016 Copyright:
+      <a href="agent.html"> <b>TCT HOLIDAYS & Technologies Pvt Ltd.</b></a>"All rights recived"</h6>
+    </div>
+  </footer>
+  <!-- Footer -->
+</body>
+</html> 
