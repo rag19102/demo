@@ -4,37 +4,33 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
        <title>bus-search</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <meta charset = "utf-8">
+       <link rel="stylesheet" href="css/dashboard.css">
+     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+
        
        <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
           rel = "stylesheet">
-       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-    
+     
 <style>
+    span{
+        float: none !important;
+    }
 #myDIV {
   width: 100%;
   padding: 50px 0;
 }
 body {
-                   background-color:lightgrey;
+                 
                    margin: 0;
                    padding-bottom: 60px;
                    font-family: Arial, Helvetica, sans-serif;
                  }
-                 img{
-                     border-radius:10;
-                     width: 60px;
-                     padding-left:10px;
-                     
-                 }
+                
             
             .topnav {
                      overflow: hidden;
@@ -110,10 +106,11 @@ body {
                          }
                          .flight-details{
                              
-                             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
-                             text-decoration: underline;
+                             font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                             text-decoration:underline;
                              margin-left:30px;
                          }
+
                          .tip{
 
                   visibility: hidden;  
@@ -162,7 +159,6 @@ body {
   padding: 19px 19px 19px 19px;
   margin-top: 10px;
   background-color: whitesmoke;
-  high
   
 }
 #reset{
@@ -182,6 +178,11 @@ color: yellowgreen;
 
 
 }
+
+
+
+
+
 #net{
   display: none;
 }
@@ -251,11 +252,82 @@ td p{
 }
 
 
-
-
  </style>
 </head>
 <body>
+    
+        <nav class="navbar navbar-light">
+    
+                <div class="navbar-header col-lg-8 col-sm-6 col-md-8 col-sm-6">
+                <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Travel Cope" style="max-width: 200px">
+              </div>
+              
+              <div class="col-md-2 float-right" id="nav">
+                <span>
+                    Welcome TT 
+                </span>
+              </div>
+              <div class="col-md-1 hidden-xs">
+                  <i class="fa fa-inr"></i>
+                  10000
+              </div>
+              <div class="col-md-1 right-menu-item dropdown-toggle col-sm-6"  data-toggle="dropdown" >
+                  <img src="images/avatar.png" alt="Avatar" class="avatar">
+                  <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list" style="-webkit-appearance: none;">
+                      <li class="text-center">
+                          <h5>Hi Raghavender Rao</h5>
+                      </li>
+                      <li><a href="profile.html"><i class="dripicons-user m-r-10"></i> Profile</a></li>
+                      <li><a href="transcation.html"><i class="fa fa-inr m-r-10"></i> My Transactions</a></li>
+                      <li><a href="index.html"><i class="dripicons-power m-r-10"></i> Logout</a></li>
+                  </ul>
+          
+              </div>
+           </nav>
+           
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="navbar-collapse collapse justify-content-between">
+                  <!-- Links -->
+                <ul class="navbar-nav mx-auto text-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="agent.html"><i class="fa fa-dashboard"></i>Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="flights.html"><i class="fa fa-plane"></i>Flights</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="buses.html"><i class="fa fa-bus"></i>buses</a>
+                  </li>
+              
+                  <!-- Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-inr"></i>Recharges</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="rechargeonline.html">Recharge Online</a>
+                      <a class="dropdown-item" href="rechargeoffline.html">Recharge Ofline</a>
+                      <a class="dropdown-item" href="rechargerequest.html">Recharge Request</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-credit-card"></i>Bookings
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="all.html">All</a>
+                        <a class="dropdown-item" href="buslist.html">Buses</a>
+                        <a class="dropdown-item" href="flightlist.html">Flights</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-cog"></i>More
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="customerlist.html">Customer List</a>
+                          <a class="dropdown-item" href="accounts.html">Accounts</a>
+                        </div>
+                      </li>
+                </ul>
+                </div>
+              </nav>
     <div class="container" id="c1">
         <div class="topnav" id="c4">
             <div class="topnav-left-search" id="c5">
@@ -263,7 +335,7 @@ td p{
               </div>
             <div class="topnav-left-hide" id="c6">
                 <button onclick="myFunction()">
-                        <i class="far fa-edit"></i>
+                        <i class="fa fa-edit"></i>
                         Modify Search</button>
             </div>
             <div class="topnav-right">
@@ -402,8 +474,8 @@ td p{
             </div>
         </div>
     </div>
-    <div class="container pull-right" id="reset">
-            <a href="bus-search.html" class="text-uppercase" onclick="Reset()">Reset All</a>
+    <div class="container" id="reset">
+            <a href="busFsearch.html" class="text-uppercase" onclick="Reset()">Reset All</a>
         </div>
         
         <div class="container">
@@ -411,7 +483,7 @@ td p{
             <div class="col-md-9">  
               
               <div class="clearfix">
-            <p class="text-capitalize m-0 pull-left"> Showing <b class="flights-count">1</b> Bus from <b>HYDERABAD</b> to <b>BANGALORE </b> on <b>24/03/2019</b></p>
+            <p class="text-capitalize  pull-left"> Showing <b class="flights-count">1</b> Bus from <b>HYDERABAD</b> to <b>BANGALORE </b> on <b>24/03/2019</b></p>
           </div>
         </div>
           <div class="col-md-3" id="shownetfare">
@@ -435,7 +507,7 @@ td p{
                                         <tbody>
                                           <tr>
                                             <tH>
-                                        <i class="fas fa-bus" style="font-size:40px;"></i>
+                                        <i class="fa fa-bus" style="font-size:40px;"></i>
                         
                                    </tH>
                         <th>
@@ -457,9 +529,9 @@ td p{
 
             <div class="col-md-2">
                     <div class="timings">
-                            <div class="top-drop">
-                                <b class="dept-time"><span class="filter-dept-time">22:00:00</span> <span class="visible-xs visible-md">-</span></b>
-                                <div class="dropbox-ls middle-align" style="display:none;">
+                            <div class="top-drop" id="" >
+                                <b class="dept-time"><lable class="filter-dept-time" onmouseover="dis1()" > 22:00:00</lable> <lable class="visible-xs visible-md"></lable></b>
+                                <div class="dropbox-ls middle-align" id="timings1" style="display:none;">
                                     <p><b>Departing from hyderabad</b></p>
                                     <p><b>Boarding Point</b></p>
                                     <div class="table-pnts scrollbar">
@@ -568,7 +640,7 @@ td p{
                                     <div class="row">
                                         <div class="flight-details">
                                           <div class="button"  id="bus-details"onclick="mylistFunction()">
-                                                    Bus Details  <i class="fas fa-angle-double-right"></i>
+                                                    Bus Details  <i class="fa fa-angle-double-right"></i>
                                                 </div>
             
             
@@ -675,7 +747,7 @@ td p{
                            <p> your Boarding and Dropping point</p>
                            <div class="col-md-12">
                            <button id="dLabela" class="btn btn-primary text-white" style="padding:3%;" data-target="dropdown" data-toggle="dropdown">
-                                <b>BOARDING / DROPPING</b><i class="fas fa-angle-down" style="padding-right: 10px;"></i> </button>
+                                <b>BOARDING / DROPPING</b><i class="fa fa-angle-down" style="padding-right: 10px;"></i> </button>
                                 </div>
     
     
@@ -867,6 +939,10 @@ td p{
     
     }
     
+
+  function dis1(){
+document.getElementById("timings1").style="display:block; position:absolute; background-color:dimgray; width:100px;"
+    }
     
     
     
@@ -917,10 +993,19 @@ td p{
         </script>
 
 
+<br>
+<br>
+<br>
+<br>
 
 
+<footer class="footer">
 
-
+    
+        <div class="footer-copyright text-center py-3"><h6>© 2016 Copyright:
+          <a href="agent.html"> <b>TCT HOLIDAYS & Technologies Pvt Ltd.</b></a>"All rights recived"</h6>
+        </div>
+      </footer>  
     
    </body>
 </html>

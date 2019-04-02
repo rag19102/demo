@@ -7,11 +7,16 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="css/dashboard.css">
+            <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+
+
+
            <title>buses</title>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <style>
             body {
-                   background-color:gray;
+                  
                    margin: 0;
                    padding-bottom: 60px;
                    font-family: Arial, Helvetica, sans-serif;
@@ -67,7 +72,83 @@
         
     </head>
  <body>
-     <form action="bus-search.html">
+
+
+        <nav class="navbar navbar-light">
+    
+                <div class="navbar-header col-lg-8 col-sm-6 col-md-8 col-sm-6">
+                <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Travel Cope" style="max-width: 200px">
+              </div>
+              
+              <div class="col-md-2 float-right" id="nav">
+                <span>
+                    Welcome TT 
+                </span>
+              </div>
+              <div class="col-md-1 hidden-xs">
+                  <i class="fa fa-inr"></i>
+                  10000
+              </div>
+              <div class="col-md-1 right-menu-item dropdown-toggle col-sm-6"  data-toggle="dropdown" >
+                  <img src="images/avatar.png" alt="Avatar" class="avatar">
+                  <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list" style="-webkit-appearance: none;">
+                      <li class="text-center">
+                          <h5>Hi Raghavender Rao</h5>
+                      </li>
+                      <li><a href="profile.html"><i class="dripicons-user m-r-10"></i> Profile</a></li>
+                      <li><a href="transcation.html"><i class="fa fa-inr m-r-10"></i> My Transactions</a></li>
+                      <li><a href="index.html"><i class="dripicons-power m-r-10"></i> Logout</a></li>
+                  </ul>
+          
+              </div>
+           </nav>
+           
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="navbar-collapse collapse justify-content-between">
+                  <!-- Links -->
+                <ul class="navbar-nav mx-auto text-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="agent.html"><i class="fa fa-dashboard"></i>Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="flights.html"><i class="fa fa-plane"></i>Flights</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="buses.html"><i class="fa fa-bus"></i>buses</a>
+                  </li>
+              
+                  <!-- Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-inr"></i>Recharges</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="rechargeonline.html">Recharge Online</a>
+                      <a class="dropdown-item" href="rechargeoffline.html">Recharge Ofline</a>
+                      <a class="dropdown-item" href="rechargerequest.html">Recharge Request</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-credit-card"></i>Bookings
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="all.html">All</a>
+                        <a class="dropdown-item" href="buslist.html">Buses</a>
+                        <a class="dropdown-item" href="flightlist.html">Flights</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-cog"></i>More
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="customerlist.html">Customer List</a>
+                          <a class="dropdown-item" href="accounts.html">Accounts</a>
+                        </div>
+                      </li>
+                </ul>
+                </div>
+              </nav>
+          
+
+     <form action="bussearch.html" method="POST">
        <div class="container"id="c1">
              <div class="topnav" id="c4">
                  <div class="topnav-left-search" id="c5">
@@ -115,12 +196,19 @@
 
             <div class="col-md-2 col-xs-12 col-sm-6">
                     <div class="form-group" id="search">
-                        <button class="btn btn-primary btn-flight-submit" type="button" onclick="bus-search.html"><i class="fa fa-search"></i> Search Buses</button>
+                        <button class="btn btn-primary btn-flight-submit" type="submit " ><i class="fa fa-search"></i>Search Buses</button>
                     </div>
                 </div>
             </div>
             </div>
         </form>
-    </form>            
+     
+    <footer class="footer">
+
+    
+            <div class="footer-copyright text-center py-3"><h6>© 2016 Copyright:
+              <a href="agent.html"> <b>TCT HOLIDAYS & Technologies Pvt Ltd.</b></a>"All rights recived"</h6>
+            </div>
+          </footer>         
     </body>
     </html>
