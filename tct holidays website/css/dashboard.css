@@ -67,7 +67,8 @@ body {
   }
 
   .footer {
-    position: fixed;
+    position:fixed;
+   
     left: 0;
     bottom: 0;
      
@@ -181,4 +182,8 @@ span{
   border-right: .3em solid transparent;
   border-bottom: 0;
   border-left: .3em solid transparent;
+}
+
+.navbar{
+  position: sticky;
 }
