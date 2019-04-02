@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<!-- font awsom icons -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="E:\tct holidays website\css\dashboard.css">
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+<link href="css/dashboard.css" rel="stylesheet">
+<link href="css/recharge.css" rel="stylesheet"> 
+
+
+<style>
+    body{
+        
+        color:#797979;
+    }
+    .card-footer {
+        padding: .75rem 1.25rem;
+        background-color: white;
+        border-top: none;
+    }
+    select {
+        word-wrap: normal;
+        width: 75px;
+        display: inline-block;
+    }
+    table{
+      width:100%;
+        border: none 1px solid;
+
+    }
+    
+    th,td{
+        border-bottom:1px solid #ddd;
+        display:absolute;
+    
+    }
+    th{
+        height: 50px;
+        padding: 15px;
+        background-color: rgb(141, 56, 221);
+        color:white;
+    }
+    td{
+        height: 50px;
+        padding-left: 15px;
+        padding: 12px,10px;
+        background-color: #f9f9f9; 
+    }
+    .btn-info {
+        background-color: #34d3eb !important;
+        border: 1px solid #34d3eb !important;
+    }
+    .btn-xs {
+        padding: 1px 5px !important;
+        font-size: 12px;
+    }
+    .btn{
+        
+        border-radius: 2px;
+        font-size: 14px;
+        font-family: 'Nunito Sans', sans-serif;
+    }
+    
+    </style>
+
+</head>
+<body>
+  <nav class="navbar navbar-light bg-light ">
+    
+      <div class="navbar-header col-lg-8 col-sm-6 col-md-8 col-sm-6">
+      <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Travel Cope" style="max-width: 200px">
+    </div>
+    
+    <div class="col-md-2 float-right hidden-xs " id="nav">
+      <span>
+          Welcome TT 
+      </span>
+    </div>
+    <div class="col-md-1 hidden-xs">
+        <i class="fa fa-inr"></i>
+        10000
+    </div>
+    <div class="col-md-1 right-menu-item dropdown-toggle col-sm-6"  data-toggle="dropdown" >
+        <img src="images/avatar.png" alt="Avatar" class="avatar">
+        <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list" style="-webkit-appearance: none;">
+            <li class="text-center">
+                <h5>Hi Raghavender Rao</h5>
+            </li>
+            <li><a href="profile.html"><i class="dripicons-user m-r-10"></i> Profile</a></li>
+            <li><a href="transacation.html"><i class="fa fa-inr m-r-10"></i> My Transactions</a></li>
+            <li><a href="index.html"><i class="dripicons-power m-r-10"></i> Logout</a></li>
+        </ul>
+
+    </div>
+ </nav>
+ 
+  <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+      <div class="navbar-collapse collapse justify-content-between">
+        <!-- Links -->
+      <ul class="navbar-nav mx-auto text-center">
+        <li class="nav-item">
+          <a class="nav-link" href="agent.html"><i class="fa fa-dashboard"></i>Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="flights.html"><i class="fa fa-plane"></i>Flights</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="buses.html"><i class="fa fa-bus"></i>buses</a>
+        </li>
+    
+        <!-- Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-inr"></i>Recharges</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="rechargeonline.html">Recharge Online</a>
+            <a class="dropdown-item" href="rechargeoffline.html">Recharge Ofline</a>
+            <a class="dropdown-item" href="rechargerequest.html">Recharge Request</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-credit-card"></i>Bookings
+            </a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="all.html">All</a>
+              <a class="dropdown-item" href="buslist.html">Buses</a>
+              <a class="dropdown-item" href="flightlist.html">Flights</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-cog"></i>More
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="customerlist.html">Customer List</a>
+                <a class="dropdown-item" href="accounts.html">Accounts</a>
+              </div>
+            </li>
+      </ul>
+      </div>
+    </nav>
+
+
+  <div class="container" style="margin-top: 3%;">
+    <div class="row ">
+        
+      <div class="col-md-12 heading ">
+        <div class="btn-group pull-right">
+          <ul class="link-list">
+            <li>
+              <a href="#">Home <i class="fa fa-angle-right"></i></a>
+            </li>
+            <li>
+              <a href="#">Profile <i class="fa fa-angle-right"></i></a>
+            </li>
+            <li>
+                <a href="#">Transactions</a>
+              </li>
+          </ul>
+        </div>
+            <h6>Transactions</h6>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+        <div class="card" style="border: 2px solid #ddd ;">
+    <div calss="row" >
+            
+        <div class="col-md-12" style="padding:20px 10px;">
+            
+        
+                
+                         <b> <lable>Current Balance: &nbsp; <i class="fas fa-rupee-sign"></i>1020060.00</lable></b>
+                          <hr>                   
+                    <table>
+                            <tr>
+                                <th>S.NO</th>
+                                <th>Date</th>
+                                <th>Remarks</th>
+                                <th>Amount(INR)</th>
+                                
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>14-Mar-2019 10:20:35</td>
+                                <td><b>Amount Added To Wallet</b></td>
+                                <td>+2000.00</td>
+                               
+                                
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>14-Mar-2019 15:40:35</td>
+                                <td><b>Amount Added To Wallet</b></td>
+                                <td> +20.00</td>
+                               
+                                
+                                
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>14-Mar-2019 17:35:20</td>
+                                <td><b>Amount Added To Wallet</b></td>
+                                <td>+1000.00</td>
+                                
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>14-Mar-2019 18:49:10</td>
+                                <td><b>Amount Added To Wallet</b></td>
+                                <td>+10.00</td>
+                                
+                            </tr>
+                            
+                           </table>
+                    
+                   
+               
+                
+            
+         
+
+        </div>
+    </div>
+        
+        </div>
+    </div>
+    
+
+
+      
+
+<footer class="footer">
+
+    
+    <div class="footer-copyright text-center py-3"><h6>© 2016 Copyright:
+      <a href="agent.html"> <b>TCT HOLIDAYS & Technologies Pvt Ltd.</b></a>"All rights recived"</h6>
+    </div>
+  </footer>
+  <!-- Footer -->
+</body>
+</html> 
