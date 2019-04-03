@@ -2,7 +2,8 @@
 body {
     font-family: "Lato", sans-serif;
     transition: background-color .5s;
-   background-color: #f9f9f9;  
+   background-color: #f9f9f9;
+   color: #797979;;  
   }
   
   .sidenav {
@@ -72,7 +73,7 @@ position:relative;
     border-left: 6px solid lightblue;
     background-color: #f9f9f9;
     margin-bottom: 1%;
-     position:fixed;
+     
     
   }
   .footer {  
@@ -96,7 +97,7 @@ position:relative;
 
 
 
-  .bg-light {
+.bg-light {
     background-color: white !important;
 }
   a:hover {
