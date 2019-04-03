@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+    <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+            <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+           <title>SEARCH INDEX</title>
+           <link href="css/dashboard.css" rel="stylesheet">
+       
+           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+         
+
+            <style>
+            
+            .topnav {
+                     overflow: hidden;
+             
+                     }
+                    
+                    
+            
+            .topnav a  {
+                         float: left;
+                         text-align: center;
+                         padding: 14px 16px;
+                         text-decoration: none;
+                         font-size: 17px;
+                        }
+            
+            .topnav a:hover {
+              background-color:dimgrey;
+            }
+            label {
+    font-size: 13px;
+    color: #313a46;
+    letter-spacing: 0.01em;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+            
+            
+            
+            .topnav-right {
+                float: right;
+                margin-top: 10px;
+                
+              }
+            #c2{                
+             background-color:honeydew;
+              padding-left: 0px;
+            }
+            #c3{
+                
+                background-color: honeydew;
+               }
+               
+               #c5{
+                         float: left;
+                         
+                         padding: 14px 16px;
+                         text-decoration: none;
+                         font-size: 17px;
+
+               }
+               
+               #select {
+               box-sizing: content-box;
+               height: 23px;
+               width: 30px;
+               }
+               .submit-button{
+                   border: 10px;
+                   background-color:rgb(71, 169, 199);
+                   margin-top: 30px;
+
+                   height: 40%;
+                   color:white;
+                   min-width: 70%;
+                   text-align: inline-block;
+                   margin-left: 15px;    
+                   float: right;
+                  
+                 }
+
+               .col-md-3 .col-md-4 label{
+                   margin-left: 0px;
+                   text-align: left;
+
+
+               }
+                          
+             
+            
+            </style>
+        
+    </head>
+ <body>
+     
+        <nav class="navbar navbar-light bg-light ">
+          
+                <div class="navbar-header col-lg-8 col-sm-6 col-md-8 col-sm-6">
+                <a href="#" class="navbar-brand"><img src="images/logo.png" alt="Travel Cope" style="max-width: 200px">
+              </div>
+              
+              <div class="col-md-2 float-right hidden-xs " id="nav">
+                <span>
+                    Welcome TT 
+                </span>
+              </div>
+              <div class="col-md-1 hidden-xs">
+                <i class="fas fa-rupee-sign"></i>
+                  10000
+              </div>
+              <div class="col-md-1 right-menu-item dropdown-toggle col-sm-6"  data-toggle="dropdown" >
+                  <img src="images/avatar.png" alt="Avatar" class="avatar">
+                  <ul class="dropdown-menu dropdown-menu-right arrow-dropdown-menu arrow-menu-right user-list notify-list" style="-webkit-appearance: none;">
+                      <li class="text-center">
+                          <h5>Hi Raghavender Rao</h5>
+                      </li>
+                      <li><a href="profile.html"><i class="dripicons-user m-r-10"></i> Profile</a></li>
+                      <li><a href="transcation.html"><i class="fa fa-inr m-r-10"></i> My Transactions</a></li>
+                      <li><a href="index.html"><i class="dripicons-power m-r-10"></i> Logout</a></li>
+                  </ul>
+        
+              </div>
+           </nav>
+           
+            <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+                <div class="navbar-collapse collapse justify-content-between">
+                  <!-- Links -->
+                <ul class="navbar-nav mx-auto text-center">
+                  <li class="nav-item">
+                    <a class="nav-link" href="agent.html"><i class="fas fa-tv"></i>Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="flights.html"><i class="fa fa-plane"></i>Flights</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="buses.html"><i class="fa fa-bus"></i>buses</a>
+                  </li>
+              
+                  <!-- Dropdown -->
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-rupee-sign"></i>Recharges</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="rechargeonline.html">Recharge Online</a>
+                      <a class="dropdown-item" href="rechargeoffline.html">Recharge Ofline</a>
+                      <a class="dropdown-item" href="rechargerequest.html">Recharge Request</a>
+                    </div>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-credit-card"></i>Bookings
+                      </a>
+                      <div class="dropdown-menu">
+                        <a class="dropdown-item" href="all.html">All</a>
+                        <a class="dropdown-item" href="buslist.html">Buses</a>
+                        <a class="dropdown-item" href="flightlist.html">Flights</a>
+                      </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-cog"></i>More
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="customerlist.html">Customer List</a>
+                          <a class="dropdown-item" href="accounts.html">Accounts</a>
+                        </div>
+                      </li>
+                </ul>
+                </div>
+              </nav>
+    <form action="fightresults.html"> 
+       <div class="container"id="c1">
+             <div class="topnav" id="c4">
+                 <div class="topnav-left-search" id="c5">
+                        <h5>Search Flights</h5>
+                 </div>
+             
+                <div class="topnav-right">
+                  <a href="index.html">Home</a>
+                  <a href="flights.html">flight</a>
+                  <a href="flightsearch.html">Search</a>
+                </div>
+            </div>
+             
+              
+              
+       </div>
+       <div class="container" id="c2">
+             <div class="col-md-12 col-sm-12 col-xs-12">
+                <input type="radio" name="TripType" id="OneWay" value="Oneway"  checked > <label for="OneWay">One Way</label>
+                <input type="radio" name="TripType" id="RoundTrip" value="ROUND"  > <label for="RoundTrip" >Round Trip</label>
+            </div>
+        </div>
+
+        <div class="container" id="c3">
+         <div class="row">
+            <div class="col-md-2 col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label>Source</label>
+                    <input type="text" name="Source" class="form-control airports" id="Source" required value="" />
+                </div>
+            </div>
+
+            <div class="col-md-2 col-xs-12 col-sm-6">
+                    <label>Destination</label>
+                <div class="form-group ">
+                    <input type="text" name="Destination" class="form-control airports" id="Destination" required value="" />
+                </div>
+               
+            </div>
+
+            <div class="col-md-2 col-xs-12 col-sm-6">
+                <div class="form-group">
+                    <label>Departure</label>
+                    <input type="date" name="Doj" class="form-control" id="Doj" value="date" required>    
+                </div>
+            </div>
+       <!--<disabled part-->
+            <div class="col-md-2 col-xs-12 col-sm-6"  id="return"  >
+                <div class="form-group">
+                        
+                                     <label></label>Return</label>
+                    <input type="date" name="ReturnDate" class="form-control" id="ReturnDate" value="date" required  disabled >
+                         
+            </div>
+  
+            </div>
+
+            <div class="col-md-3 col-xs-12 col-sm-12">
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 col-sm-12">
+                        
+                            
+                            <label>Adults</label>
+                            <select class="form-control" id="select">
+                               
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                           
+                            </select>
+                       
+                    </div>
+                    
+                    <div class="col-md-4  col-xs-12 col-sm-12">
+                        
+                            <label>Children</label>
+                            <select class="form-control" id="select">
+                                   
+                                <option value="0" >0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                    
+                            </select>
+                        
+                    </div>
+                    <div class="col-md-4  col-xs-12 col-sm-12">
+                        
+                            <label>Infant</label>
+                            <select  class="form-control" id="select">
+                                
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                            
+                            </select>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="" >
+                
+
+                    <button class="submit-button" type="submit">Search</button>
+                       
+                       
+                    
+                        
+                </div>
+            </div>
+        </div>
+        </div>
+</form> 
+
+
+<footer class="footer">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2016 Copyright:
+          <a href="agent.html"> <b>TCT HOLIDAYS & Technologies Pvt Ltd.</b></a>"All rights recived"
+        </div>
+        <!-- Copyright -->
+      
+      </footer>   
+      <script>
+$(document).ready(function() {
+// Disable radio buttons function on Check Disable radio button.
+$("form input:radio").change(function() {
+if ($(this).val() == "ROUND") {
+$("#ReturnDate").attr('disabled', false);
+
+
+}
+// Else Enable radio buttons.
+else {
+$("#ReturnDate").attr('disabled', true);
+}
+});
+});
+    
+      </script>        
+</body>
+</html>
