@@ -250,6 +250,9 @@ td p{
     
     text-align: vertical;
 }
+.timings1{
+    width:10px;
+}
 
 
  </style>
@@ -530,38 +533,43 @@ td p{
             <div class="col-md-2">
                     <div class="timings">
                             <div class="top-drop" id="" >
-                                <b class="dept-time"><lable class="filter-dept-time" onmouseover="dis1()" > 22:00:00</lable> <lable class="visible-xs visible-md"></lable></b>
+                                <b class="dept-time"><lable class="filter-dept-time" onmouseover="dis1()"  onmouseout="dis2()" > 22:00:00</lable> <lable class="visible-xs visible-md"></lable></b>
                                 <div class="dropbox-ls middle-align" id="timings1" style="display:none;">
+                                    <div class="container" style="color:white;">
                                     <p><b>Departing from hyderabad</b></p>
                                     <p><b>Boarding Point</b></p>
                                     <div class="table-pnts scrollbar">
                                         <table class="table">
                                             <tbody>
-                                                    <tr>
-                                                        <td class="board-point">L B  Nagar</td>
+                                                    <tr style="color:white;">
+                                                        <td class="board-point" >L B  Nagar</td>
                                                         <td>22:00:00</td>
                                                     </tr>
                                             </tbody>
                                         </table>
                                     </div>
+                                    </div>
                                 </div>
                             </div>
                             <i class="fa fa-long-arrow-right hidden-sm hidden-xs"></i>
+
                             <div class="top-drop">
-                                <b>09:00:00</b>
-                                <div class="dropbox-ls middle-align" style="display:none;">
+                                <b onmouseover="dis3()"  onmouseout="dis4()" >09:00:00</b>
+                                <div class="dropbox-ls middle-align" id="timings2" style="display:none;">
+                                    <div style="color:white;">
                                     <p><b>to Destination bangalore</b></p>
                                     <p><b>Dropping Point</b></p>
                                     <div class="table-pnts scrollbar">
-                                        <table class="table">
+                                        <table class="table" style="color:white;">
                                             <tbody>
                                                     <tr>
-                                                        <td class="drop-point">Indira Nagar</td>
+                                                        <td class="drop-point" >Indira Nagar</td>
                                                         <td>09:00:00</td>
                                                     </tr>
                                             </tbody>
                                         </table>
                                     </div>
+                                </div>
                                 </div>
                             </div>
         
@@ -581,7 +589,7 @@ td p{
                             <div class="seatno">
                                 <b>7 Seats</b>
                                 <span class="hidden-xs hidden-sm">&nbsp;</span>
-                                <div class="top-drop hidden-xs">
+                                <div class="top-drop hidden-xs" onmouseover="dis5()"  onmouseout="dis6()">
                                     <div class="text-danger">Cancellation Policy<i class="fa fa-info-circle"></i></div>
                                     <div class="dropbox-ls" id="Cancellation" style="display:none;">
                                         <table class="table table-cancl">
@@ -621,11 +629,11 @@ td p{
                     <div class="text-center">
                             <div class="bus-cost">
                                 <span class="agent-net-fare"  id="agent-net-fare" style="display: none;">
-                                        <i class="fas fa-rupee-sign"></i>
+                                        <i class="fa fa-inr"></i>
                                     <span class="">197</span>
                                 </span>
                                 <span class="text-danger">
-                                        <i class="fas fa-rupee-sign"></i>
+                                        <i class="fa fa-inr"></i>
                                     <span class="bus-fare">210.00</span>
                                 </span> <br>
                             </div>
@@ -941,11 +949,29 @@ td p{
     
 
   function dis1(){
-document.getElementById("timings1").style="display:block; position:absolute; background-color:dimgray; width:100px;"
+document.getElementById("timings1").style="display:block; position:absolute; background-color:dimgray;"
+    }
+    
+  function dis2(){
+document.getElementById("timings1").style="display:none; "
     }
     
     
+    function dis3(){
+document.getElementById("timings2").style="display:block; position:absolute; background-color:dimgray;"
+    }
     
+  function dis4(){
+document.getElementById("timings2").style="display:none; "
+    }
+    
+    function dis5(){
+document.getElementById("Cancellation").style="display:block; position:absolute; background-color:dimgray; hight:auto;"
+    }
+    
+  function dis6(){
+document.getElementById("Cancellation").style="display:none;  "
+    }
     
         
     
