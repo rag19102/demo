@@ -30,11 +30,13 @@ table{
     th{
         height: 50px;
         padding: 15px;
+        background-color: rgb(141, 56, 221);
+        color:white;
     }
-    td{
+    td {height: 50px;
         padding-left: 15px;
         padding: 12px,10px;
-        background-color: #f9f9f9; 
+        background-color: #f9f9f9;  
     }
 
     </style>
@@ -113,34 +115,34 @@ table{
         </ul>
         </div>
       </nav>
-      <br>
-
-      <div class="container">
-          <div class="row ">
+     
+      <div class="container" style="margin-top: 2%;">
+          <div class="row" >
+      
             <div class="col-md-12 heading ">
               <div class="btn-group pull-right">
                 <ul class="link-list">
                   <li>
-                    <a href="#">Home ></a>
+                    <a href="#">Home <i class="fa fa-angle-right"></i></a>
                   </li>
                   <li>
-                    <a href="#">Accounts ></a>
+                    <a href="#"> Profile <i class="fa fa-angle-right"></i></a>
                   </li>
                   <li>
                     <a href="#">Accounts</a>
-                    </li>
-                  </ul>
-
+                  </li>
+                </ul>
               </div>
-                <h4>Accounts</h4>
-
+              <h5> Accounts</h5>
             </div>
           </div>
-      </div>
+        </div>
+
+
       <div class="container">
           <div  class="row">
-              <div class="col-md-4">
-                  <div class="card" style="border: #ddd 1px solid; " id="tab1">
+              <div class="col-md-4" id="tab1">
+                  <div class="card" style="border: #ddd 1px solid; " >
                     <div class="card-header">
                         <label>Ledger</label>
                     </div>
@@ -301,9 +303,12 @@ table{
           </div>
         </div>
       </div>
- 
+ <br> 
+ <br>
+ <br>
+ <br>
 
-<footer class="footer">
+<footer class="footer" >
 
     <!-- Copyright -->
     <div class="footer-copyright text-center py-3">© 2016 Copyright:
@@ -313,6 +318,9 @@ table{
   
   </footer>
   <!-- Footer -->
+
+
+
   <script>
   function mylistFunction() {
                 var y = document.getElementById("list1");
@@ -339,6 +347,13 @@ table{
                 } 
                 else {
                     y.style.display = "none";
+                }
+                var z=document.getElementById("tab1");
+                if (z.style.display === "none") {
+                    z.style.display = "block";
+                } 
+                else {
+                    z.style.display = "none";
                 }
                 
 
