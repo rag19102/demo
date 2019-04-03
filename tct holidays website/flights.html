@@ -11,8 +11,8 @@
            <title>SEARCH INDEX</title>
            <link href="css/dashboard.css" rel="stylesheet">
        
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
-           
+           <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+         
 
             <style>
             
@@ -112,7 +112,7 @@
                 </span>
               </div>
               <div class="col-md-1 hidden-xs">
-                  <i class="fa fa-inr"></i>
+                <i class="fas fa-rupee-sign"></i>
                   10000
               </div>
               <div class="col-md-1 right-menu-item dropdown-toggle col-sm-6"  data-toggle="dropdown" >
@@ -134,7 +134,7 @@
                   <!-- Links -->
                 <ul class="navbar-nav mx-auto text-center">
                   <li class="nav-item">
-                    <a class="nav-link" href="agent.html"><i class="fa fa-dashboard"></i>Dashboard</a>
+                    <a class="nav-link" href="agent.html"><i class="fas fa-tv"></i>Dashboard</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="flights.html"><i class="fa fa-plane"></i>Flights</a>
@@ -145,7 +145,7 @@
               
                   <!-- Dropdown -->
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-inr"></i>Recharges</a>
+                    <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-rupee-sign"></i>Recharges</a>
                     <div class="dropdown-menu">
                       <a class="dropdown-item" href="rechargeonline.html">Recharge Online</a>
                       <a class="dropdown-item" href="rechargeoffline.html">Recharge Ofline</a>
@@ -180,9 +180,9 @@
                  </div>
              
                 <div class="topnav-right">
-                  <a href="index.html bg-color:black">Home</a>
-                  <a href="#flights">flight</a>
-                  <a href="#flightsearch.html">Search</a>
+                  <a href="index.html">Home</a>
+                  <a href="flights.html">flight</a>
+                  <a href="flightsearch.html">Search</a>
                 </div>
             </div>
              
@@ -191,8 +191,8 @@
        </div>
        <div class="container" id="c2">
              <div class="col-md-12 col-sm-12 col-xs-12">
-                <input type="radio" name="TripType" id="OneWay" value="Oneway" onchange="flights.updateTripType()" checked > <label for="OneWay">One Way</label>
-                <input type="radio" name="TripType" id="RoundTrip" value="ROUND" onchange="flights.updateTripType()" > <label for="RoundTrip">Round Trip</label>
+                <input type="radio" name="TripType" id="OneWay" value="Oneway"  checked > <label for="OneWay">One Way</label>
+                <input type="radio" name="TripType" id="RoundTrip" value="ROUND"  > <label for="RoundTrip" >Round Trip</label>
             </div>
         </div>
 
@@ -216,19 +216,20 @@
             <div class="col-md-2 col-xs-12 col-sm-6">
                 <div class="form-group">
                     <label>Departure</label>
-                    <input type="date" name="Doj" class="form-control datepicker" id="Doj" value="date" required>    
+                    <input type="date" name="Doj" class="form-control" id="Doj" value="date" required>    
                 </div>
             </div>
-
-            <div class="col-md-2 col-xs-12 col-sm-6">
+       <!--<disabled part-->
+            <div class="col-md-2 col-xs-12 col-sm-6"  id="return"  >
                 <div class="form-group">
+                        
+                                     <label></label>Return</label>
+                    <input type="date" name="ReturnDate" class="form-control" id="ReturnDate" value="date" required  disabled >
                          
-                                     <label>Return</label>
-                    <input type="date" name="ReturnDate" class="form-control datepicker" id="ReturnDate" value="20/03/2019" disabled >
-                
             </div>
   
             </div>
+
             <div class="col-md-3 col-xs-12 col-sm-12">
                 <div class="row">
                     <div class="col-md-4 col-xs-12 col-sm-12">
@@ -298,6 +299,8 @@
         </div>
         </div>
 </form> 
+
+
 <footer class="footer">
 
         <!-- Copyright -->
@@ -306,6 +309,23 @@
         </div>
         <!-- Copyright -->
       
-      </footer>           
+      </footer>   
+      <script>
+$(document).ready(function() {
+// Disable radio buttons function on Check Disable radio button.
+$("form input:radio").change(function() {
+if ($(this).val() == "ROUND") {
+$("#ReturnDate").attr('disabled', false);
+
+
+}
+// Else Enable radio buttons.
+else {
+$("#ReturnDate").attr('disabled', true);
+}
+});
+});
+    
+      </script>        
 </body>
 </html>

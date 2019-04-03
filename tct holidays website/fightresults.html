@@ -1,22 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-       <title>SEARCH RESULTS</title>
-       <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
-          rel = "stylesheet">
-       <script src = "https://code.jquery.com/jquery-1.10.2.js"></script>
-       <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-       <link href="css/dashboard.css" rel="stylesheet">
-       
-<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
-    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="web-fonts-with-css/css/fontawesome-all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <title>SEARCH INDEX</title>
+   <link href="css/dashboard.css" rel="stylesheet">
+
+
+   
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+
 <style>
      @media (max-width: 767px) {
     .hidden-xs{
@@ -226,7 +225,7 @@ margin-top: 10px;
             </span>
           </div>
           <div class="col-md-1 hidden-xs">
-              <i class="fa fa-inr"></i>
+            <i class="fas fa-rupee-sign"></i>
               10000
           </div>
           <div class="col-md-1 right-menu-item dropdown-toggle col-sm-6"  data-toggle="dropdown" >
@@ -248,7 +247,7 @@ margin-top: 10px;
               <!-- Links -->
             <ul class="navbar-nav mx-auto text-center">
               <li class="nav-item">
-                <a class="nav-link" href="agent.html"><i class="fa fa-dashboard"></i>Dashboard</a>
+                <a class="nav-link" href="agent.html"><i class="fas fa-tv"></i>Dashboard</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="flights.html"><i class="fa fa-plane"></i>Flights</a>
@@ -259,7 +258,7 @@ margin-top: 10px;
           
               <!-- Dropdown -->
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fa fa-inr"></i>Recharges</a>
+                <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown"><i class="fas fa-rupee-sign"></i>Recharges</a>
                 <div class="dropdown-menu">
                   <a class="dropdown-item" href="rechargeonline.html">Recharge Online</a>
                   <a class="dropdown-item" href="rechargeoffline.html">Recharge Ofline</a>
@@ -300,7 +299,7 @@ margin-top: 10px;
                 <div class="modify">
             <div class="topnav-left-hide" id="c6">
                      <button onclick="myFunction()">
-                        <i class="far fa-edit"></i>
+                        <i class="fa fa-edit"></i>
                      Modify Search</button>     
             </div>
         </div>
@@ -320,113 +319,118 @@ margin-top: 10px;
 
  <div id="myDIV" style="display:none">
 
+    <form action="fightresults.html"> 
+       
         <div class="container" id="c2">
-                <div class="col-md-12 col-sm-12 col-xs-12">
-                   <input type="radio" name="TripType" id="OneWay" value="Oneway" onchange="flights.updateTripType()" checked > <label for="OneWay">One Way</label>
-                   <input type="radio" name="TripType" id="RoundTrip" value="ROUND" onchange="flights.updateTripType()" > <label for="RoundTrip">Round Trip</label>
-               </div>
-           </div>
-
-        <div class="container" id="c3">
-                <div class="row">
-                   <div class="col-md-2 col-xs-12 col-sm-6">
-                       <div class="form-group">
-                           <label>Source</label>
-                           <input type="text" name="Source" class="form-control airports" id="Source" required value="" />
-                       </div>
-                   </div>
-       
-                   <div class="col-md-2 col-xs-12 col-sm-6">
-                           <label>Destination</label>
-                       <div class="form-group ">
-                           <input type="text" name="Destination" class="form-control airports" id="Destination" required value="" />
-                       </div>
-                      
-                   </div>
-       
-                   <div class="col-md-2 col-xs-12 col-sm-6">
-                       <div class="form-group">
-                           <label>Departure</label>
-                           <input type="date" name="Doj" class="form-control datepicker" id="Doj" value="date" required>    
-                       </div>
-                   </div>
-       
-                   <div class="col-md-2 col-xs-12 col-sm-6">
-                       <div class="form-group">
+              <div class="col-md-12 col-sm-12 col-xs-12">
+                 <input type="radio" name="TripType" id="OneWay" value="Oneway"  checked > <label for="OneWay">One Way</label>
+                 <input type="radio" name="TripType" id="RoundTrip" value="ROUND"  > <label for="RoundTrip" >Round Trip</label>
+             </div>
+         </div>
+ 
+         <div class="container" id="c3">
+          <div class="row">
+             <div class="col-md-2 col-xs-12 col-sm-6">
+                 <div class="form-group">
+                     <label>Source</label>
+                     <input type="text" name="Source" class="form-control airports" id="Source" required value="" />
+                 </div>
+             </div>
+ 
+             <div class="col-md-2 col-xs-12 col-sm-6">
+                     <label>Destination</label>
+                 <div class="form-group ">
+                     <input type="text" name="Destination" class="form-control airports" id="Destination" required value="" />
+                 </div>
+                
+             </div>
+ 
+             <div class="col-md-2 col-xs-12 col-sm-6">
+                 <div class="form-group">
+                     <label>Departure</label>
+                     <input type="date" name="Doj" class="form-control" id="Doj" value="date" required>    
+                 </div>
+             </div>
+        <!--<disabled part-->
+             <div class="col-md-2 col-xs-12 col-sm-6"  id="return"  >
+                 <div class="form-group">
+                         
+                                      <label></label>Return</label>
+                     <input type="date" name="ReturnDate" class="form-control" id="ReturnDate" value="date" required  disabled >
+                          
+             </div>
+   
+             </div>
+ 
+             <div class="col-md-3 col-xs-12 col-sm-12">
+                 <div class="row">
+                     <div class="col-md-4 col-xs-12 col-sm-12">
+                         
+                             
+                             <label>Adults</label>
+                             <select class="form-control" id="select">
                                 
-                                            <label>Return</label>
-                           <input type="date" name="ReturnDate" class="form-control datepicker" id="ReturnDate" value="20/03/2019" disabled >
-                       
-                   </div>
-         
-                   </div>
-                   <div class="col-md-3 col-xs-12 col-sm-12">
-                       <div class="row">
-                           <div class="col-md-4 col-xs-12 col-sm-12">
-                               
-                                   
-                                   <label>Adults</label>
-                                   <select class="form-control" id="select">
-                                      
-                                       <option value="1">1</option>
-                                       <option value="2">2</option>
-                                       <option value="3">3</option>
-                                       <option value="4">4</option>
-                                       <option value="5">5</option>
-                                       <option value="6">6</option>
-                                       <option value="7">7</option>
-                                       <option value="8">8</option>
-                                       <option value="9">9</option>
-                                  
-                                   </select>
-                              
-                           </div>
-                           
-                           <div class="col-md-4  col-xs-12 col-sm-12">
-                               
-                                   <label>Children</label>
-                                   <select class="form-control" id="select">
-                                          
-                                       <option value="0" >0</option>
-                                       <option value="1">1</option>
-                                       <option value="2">2</option>
-                                       <option value="3">3</option>
-                                       <option value="4">4</option>
-                                       <option value="5">5</option>
-                                       <option value="6">6</option>
-                                           
-                                   </select>
-                               
-                           </div>
-                           <div class="col-md-4  col-xs-12 col-sm-12">
-                               
-                                   <label>Infant</label>
-                                   <select  class="form-control" id="select">
-                                       
-                                       <option value="0">0</option>
-                                       <option value="1">1</option>
-                                       <option value="2">2</option>
-                                       <option value="3">3</option>
-                                       <option value="4">4</option>
-                                       <option value="5">5</option>
-                                       <option value="6">6</option>
-                                   
-                                   </select>
-                               
-                           </div>
-                       </div>
-                   </div>
-                   <div class="" >
-                       
-       
-                           <button class="submit-button" type="submit">Search</button>
-                              
-                              
-                           
-                               
-                       </div>
-                   </div>
-               </div>
+                                 <option value="1">1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3</option>
+                                 <option value="4">4</option>
+                                 <option value="5">5</option>
+                                 <option value="6">6</option>
+                                 <option value="7">7</option>
+                                 <option value="8">8</option>
+                                 <option value="9">9</option>
+                            
+                             </select>
+                        
+                     </div>
+                     
+                     <div class="col-md-4  col-xs-12 col-sm-12">
+                         
+                             <label>Children</label>
+                             <select class="form-control" id="select">
+                                    
+                                 <option value="0" >0</option>
+                                 <option value="1">1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3</option>
+                                 <option value="4">4</option>
+                                 <option value="5">5</option>
+                                 <option value="6">6</option>
+                                     
+                             </select>
+                         
+                     </div>
+                     <div class="col-md-4  col-xs-12 col-sm-12">
+                         
+                             <label>Infant</label>
+                             <select  class="form-control" id="select">
+                                 
+                                 <option value="0">0</option>
+                                 <option value="1">1</option>
+                                 <option value="2">2</option>
+                                 <option value="3">3</option>
+                                 <option value="4">4</option>
+                                 <option value="5">5</option>
+                                 <option value="6">6</option>
+                             
+                             </select>
+                         
+                     </div>
+                 </div>
+             </div>
+             <div class="" >
+                 
+ 
+                     <button class="submit-button" type="submit">Search</button>
+                        
+                        
+                     
+                         
+                 </div>
+             </div>
+         </div>
+         </div>
+ </form> 
     </div>
     
     <div class="container" id="flighttypes" >
@@ -461,7 +465,7 @@ margin-top: 10px;
                                     <div  class="top-drop">
         
                                             <button><p>
-                                            <i class="fas fa-sun"></i><br>
+                                                <i class="fa fa-cloud-sun"></i> <br>
     
                                                 00-06</p></button>
                                                 
@@ -473,7 +477,7 @@ margin-top: 10px;
                                 <div class="top-drop">
         
                                     <button><p>
-                                            <i class="fas fa-sun"></i><br>
+                                             <i class="fa fa-cloud-sun"></i><br>
                                            06-12
                                         </p></button>
                                 </div>
@@ -481,7 +485,7 @@ margin-top: 10px;
                             
                                 <div class="top-drop">
                                     <button><p>
-                                            <i class="fas fa-cloud-sun"></i><br>
+                                             <i class="fa fa-sun"></i><br>
                                             12-18</p></button>
                                     
                                 </div>
@@ -489,7 +493,7 @@ margin-top: 10px;
                             
                                     <div class="top-drop">
                                         <button><p>
-                                                <i class="fas fa-moon"></i><br>
+                                                <i class="fa fa-moon"></i><br>
                                                 
                                                 18-00</p></button>
                                         
@@ -633,7 +637,7 @@ margin-top: 10px;
 
                     <div class="money"  >
                          <div class="net" id="net"><i class="fas fa-rupee-sign"></i> 2570</div>
-                            <i class="fas fa-rupee-sign"></i>
+                         <i class="fas fa-rupee-sign"></i>
                                   2750
                          </div>
                      </div>
@@ -646,7 +650,7 @@ margin-top: 10px;
                          
                              <div class="flight-details">
                                     <div class="" onclick="mylistFunction()">
-                                        Flight Details<i class="fas fa-angle-double-right"></i>
+                                        Flight Details<i class="fa fa-angle-double-right"></i>
                                     </div>
                             
                         </div>
@@ -735,6 +739,11 @@ margin-top: 10px;
   </div>
 </div>
 </div>
+<br>
+<br>
+<br>
+<br>
+
 <footer class="footer">
 
         <!-- Copyright -->
@@ -774,6 +783,23 @@ margin-top: 10px;
                     z.style.display = "block";
                 }
             }
+            
+
+            $(document).ready(function() {
+         // Disable radio buttons function on Check Disable radio button.
+         $("form input:radio").change(function() {
+         if ($(this).val() == "ROUND") {
+         $("#ReturnDate").attr('disabled', false);
+         
+         
+         }
+         // Else Enable radio buttons.
+         else {
+         $("#ReturnDate").attr('disabled', true);
+         }
+         });
+         });
+            
 
 
         </script>
