@@ -153,7 +153,7 @@ ul {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
-  text-overflow: '';
+  
 }
 span{
   float:right;
@@ -180,6 +180,3 @@ span{
   border-left: .3em solid transparent;
 }
 
-.navbar{
-  
-}

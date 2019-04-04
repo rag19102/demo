@@ -1,0 +1,25 @@
+table {
+    width: 100%;
+  }
+
+  table,
+  th,
+  td {
+    border-bottom: 1px solid #ddd;
+    display: absolute;
+
+  }
+
+  th {
+    height: 50px;
+    padding: 15px;
+    background-color: #734a99;
+    color: white;
+  }
+
+  td {
+    height: 50px;
+    padding-left: 15px;
+    padding: 12px, 10px;
+    background-color: #f9f9f9;
+  }
